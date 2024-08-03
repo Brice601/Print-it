@@ -24,18 +24,25 @@ let leftArrowSrc = "./assets/images/arrow_left.png";
 let rightArrowSrc = "./assets/images/arrow_right.png";
 
 let newLeftArrow = document.createElement("img");
-let nexRightArrow = document.createElement("img");
+let newRightArrow = document.createElement("img");
 
 newLeftArrow.className += "arrow arrow_left";
-nexRightArrow.className += "arrow arrow_right";
+newRightArrow.className += "arrow arrow_right";
 newLeftArrow.src = leftArrowSrc;
-nexRightArrow.src = rightArrowSrc;
+newRightArrow.src = rightArrowSrc;
 newLeftArrow.setAttribute("alt", "image flèche gauche");
-nexRightArrow.setAttribute("alt", "image flèche droite")
+newRightArrow.setAttribute("alt", "image flèche droite")
 console.log(newLeftArrow);
-console.log(nexRightArrow);
+console.log(newRightArrow);
 
 baliseBanner.appendChild(newLeftArrow);
-baliseBanner.appendChild(nexRightArrow);
+baliseBanner.appendChild(newRightArrow);
 
+newLeftArrow.addEventListener("click", () => {
+	console.log("Vous avez cliqué sur la flèche de gauche")
+})
+
+newRightArrow.addEventListener("click", () => {
+	console.log("Vous avez cliqué sur la flèche de droite")
+})
 
