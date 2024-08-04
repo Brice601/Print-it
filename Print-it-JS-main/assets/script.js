@@ -16,7 +16,7 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-
+/* arrows */
 let baliseBanner = document.getElementById("banner");
 console.log(baliseBanner);
 
@@ -45,4 +45,20 @@ newLeftArrow.addEventListener("click", () => {
 newRightArrow.addEventListener("click", () => {
 	console.log("Vous avez cliqué sur la flèche de droite")
 })
+
+/* dots */
+let baliseDots = document.querySelector(".dots");
+console.log(baliseDots)
+
+for (let i = 0; i < slides.length; i++) {
+	let newDot = document.createElement("span");
+	newDot.className += "dot";
+	baliseDots.appendChild(newDot);
+}
+
+let allDots = baliseDots.querySelectorAll(".dot");
+allDots[0].classList.add("dot_selected");
+console.log(allDots);
+
+
 
